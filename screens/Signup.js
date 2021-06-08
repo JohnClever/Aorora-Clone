@@ -8,3 +8,5 @@ const Signup = () => {
 		</View>
 	);
 };
+
+export default Signup;
