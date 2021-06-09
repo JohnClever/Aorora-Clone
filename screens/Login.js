@@ -1,11 +1,9 @@
 import React from 'react';
-import { View, Text, TextInput, Image, TouchableOpacity } from 'react-native';
-import { COLORS, FONTS, image, SIZES } from '../constant';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { COLORS, FONTS, SIZES } from '../constant';
 import Svg, { Path, Ellipse, Defs, Stop, LinearGradient, ClipPath, Rect, G, Circle } from 'react-native-svg';
-// import { LinearGradient } from 'expo-linear-gradient';
 import { Button } from '../component';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
-const Login = () => {
+const Login = ({ navigation }) => {
 	return (
 		<View
 			style={{
@@ -111,6 +109,7 @@ const Login = () => {
 						borderColor: COLORS.lightGray,
 						borderWidth: 0.5,
 					}}
+					secureTextEntry={true}
 					// value={textInputValue}
 					placeholder='Password'
 				/>
@@ -131,7 +130,7 @@ const Login = () => {
 				>
 					<TouchableOpacity
 						style={{
-							marginTop: 175,
+							marginTop: 245,
 							marginLeft: 50,
 						}}
 					>
@@ -145,13 +144,14 @@ const Login = () => {
 					</TouchableOpacity>
 
 					<Button
-						customLabel='SignUp >'
+						customLabel='SignUp    >'
 						customButtonStyle={{
 							width: 150,
 							height: 40,
 							marginLeft: 90,
-							marginTop: 160,
+							marginTop: 230,
 						}}
+						onPress={() => navigation.navigate('Signup')}
 					/>
 				</View>
 			</View>

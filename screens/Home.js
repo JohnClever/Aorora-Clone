@@ -1,13 +1,13 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image } from 'react-native';
 import { Button } from '../component';
-import { FONTS, SIZES } from '../constant';
+import { FONTS, SIZES, image } from '../constant';
 import AppLoading from 'expo-app-loading';
-import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
+import { useFonts, Righteous_400Regular } from '@expo-google-fonts/righteous';
 
 const Home = ({ navigation }) => {
 	let [fontsLoaded] = useFonts({
-		Inter_900Black,
+		Righteous_400Regular,
 	});
 	if (!fontsLoaded) {
 		return <AppLoading />;
@@ -20,11 +20,21 @@ const Home = ({ navigation }) => {
 				alignItems: 'center',
 			}}
 		>
+			<Image
+				source={image.girl}
+				resizeMode='cover'
+				style={{
+					marginTop: -SIZES.padding * 5,
+					width: 400,
+					height: 400,
+				}}
+			/>
 			<Text
 				style={{
 					...FONTS.h1,
 					letterSpacing: 1.5,
-					fontFamily: 'Inter_900Black',
+					fontFamily: 'Righteous_400Regular',
+					marginTop: SIZES.padding * 2,
 				}}
 			>
 				Aurora
@@ -38,7 +48,7 @@ const Home = ({ navigation }) => {
 					alignItems: 'center',
 					position: 'absolute',
 					bottom: 0,
-					marginBottom: SIZES.padding,
+					marginBottom: SIZES.padding * 3.5,
 				}}
 				customLabelStyle={{
 					textAlign: 'center',
