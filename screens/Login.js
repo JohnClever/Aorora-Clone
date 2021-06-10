@@ -15,8 +15,8 @@ const Login = ({ navigation }) => {
 				<Svg viewBox='0 123 470 500' shape-rendering='geometricPrecision' text-rendering='geometricPrecision'>
 					<Defs>
 						<LinearGradient id='myGradient' x1='0' y1='0' x2='1' y2='1'>
-							<Stop offset='0' stopColor='#EE66AA' stopOpacity='0.8' />
-							<Stop offset='1' stopColor='#16A9C7' stopOpacity='0.7' />
+							<Stop offset='0' stopColor='#229E9B' stopOpacity='0.8' />
+							<Stop offset='1' stopColor='#5AB7C2' stopOpacity='0.7' />
 						</LinearGradient>
 					</Defs>
 					<Path
@@ -69,7 +69,7 @@ const Login = ({ navigation }) => {
 						position: 'absolute',
 						top: '15%',
 						left: 50,
-						color: COLORS.primary,
+						color: '#229E9B',
 						fontWeight: '700',
 						...FONTS.h1,
 					}}
@@ -87,10 +87,10 @@ const Login = ({ navigation }) => {
 			>
 				<TextInput
 					style={{
-						width: '70%',
+						width: '80%',
 						borderRadius: SIZES.radius,
 						padding: SIZES.base,
-						height: 40,
+						height: 50,
 						borderColor: COLORS.lightGray,
 						borderWidth: 0.5,
 						backgroundColor: COLORS.white,
@@ -101,10 +101,10 @@ const Login = ({ navigation }) => {
 				<TextInput
 					style={{
 						marginTop: SIZES.padding,
-						width: '70%',
+						width: '80%',
 						borderRadius: SIZES.radius,
 						padding: SIZES.base,
-						height: 40,
+						height: 50,
 						backgroundColor: COLORS.white,
 						borderColor: COLORS.lightGray,
 						borderWidth: 0.5,
@@ -116,7 +116,7 @@ const Login = ({ navigation }) => {
 				<Text
 					style={{
 						marginTop: SIZES.base * 2,
-						marginLeft: SIZES.padding * 5,
+						marginLeft: SIZES.padding * 6,
 						color: COLORS.secondary,
 					}}
 				>
@@ -128,20 +128,15 @@ const Login = ({ navigation }) => {
 						flexDirection: 'row',
 					}}
 				>
-					<TouchableOpacity
+					<Text
 						style={{
 							marginTop: 245,
 							marginLeft: 50,
+							...FONTS.body3,
 						}}
 					>
-						<Text
-							style={{
-								...FONTS.body3,
-							}}
-						>
-							New here?
-						</Text>
-					</TouchableOpacity>
+						New here?
+					</Text>
 
 					<Button
 						customLabel='SignUp    >'

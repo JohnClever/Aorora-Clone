@@ -13,7 +13,7 @@ const Button = ({ customLabel, customButtonStyle, customLabelStyle, onPress }) =
 			onPress={onPress}
 		>
 			<LinearGradient
-				colors={['#EE66AA', '#16A9C7']}
+				colors={['#5AB7C2', '#5AB7C2']}
 				style={{
 					width: '80%',
 					height: 50,
